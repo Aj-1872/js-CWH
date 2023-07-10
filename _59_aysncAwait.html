@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=200 , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+const ajay = async () => {
+    let delhiWeather = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("27c");
+        }, 10000);
+    });
+
+    let banglorWeather = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("25c");
+        }, 5000);
+    });
+
+   await console.log(5+8);
+
+    return [delhiWeather, banglorWeather];
+}
+
+let a = ajay();
+
+a.then((result) => {
+    console.log(result);
+});
+</script>
+
+</body>
+</html>

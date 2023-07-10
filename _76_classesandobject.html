@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     
+
+     class RailwayForm{
+        submit(){
+            alert(this.name + 'from submitted' + this.number);
+        }
+        cancle(){
+            alert(this.name +'this form is cancelled'+ this.number);
+        }
+        fill=(givenName,trainNo)=>{
+            this.name = givenName;
+            this.number = trainNo; 
+        }
+     }
+//creat a form for harry 
+     let harryForm = new RailwayForm();
+     //fill the form with the details
+     harryForm.fill('harry',"1A");
+     //creat form for ajay
+     let ajayForm1 = new RailwayForm();
+     let ajayForm2 = new RailwayForm();
+     // fill the form with ajay details
+     ajayForm1.fill('ajay','1B');
+     ajayForm2.fill('ajay','1C');
+
+
+     harryForm.submit();
+     ajayForm1.submit();
+     ajayForm2.submit();
+     ajayForm1.cancle();
+
+</script>
+</html>

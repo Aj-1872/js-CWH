@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Animal{
+        constructor(name){
+            this.name='ajay';
+        }
+
+        fly(name){
+            console.log(`i'm flying  ${name}`);
+        }
+
+        get name(){
+            return this._name;
+        }
+        set name(newName){
+            this._name = newName;
+        }
+    }
+
+    class Rabbit extends Animal{
+        eatCarrot(){
+            console.log('Eating carrot');
+        }
+    }
+
+    // in both way we can make objet 
+
+    let a = new  Animal('harry'); 
+    a.fly('bruno');
+
+
+    a.name = 'jake';
+    console.log((a.name));
+
+    let c =56;
+
+ 
+    console.log( a instanceof Animal);
+    console.log( c instanceof Animal);
+
+    let d = new Rabbit();
+
+    console.log( d instanceof Animal);
+
+
+</script>
+</html>
